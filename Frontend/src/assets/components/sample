@@ -1,0 +1,57 @@
+import React, { useState, useRef, useEffect } from "react";
+import { MapContainer, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import "./home.css";
+
+const Home = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div className="home-container">
+      <h1 className="logo">Campus Navigator</h1>
+      <div className="search-bar">
+        <span className="search-icon">🔍</span>
+        <input type="text" placeholder="Search Campus or type a location" />
+      </div>
+      <div className="nav-buttons">
+        <button className="nav-btn">Administration Block</button>
+        <button className="nav-btn">Central Library</button>
+        <button className="nav-btn">Parking</button>
+        <button className="nav-btn">Canteen</button>
+        <button className="nav-btn">Sports Complex</button>
+        <button className="nav-btn">Auditorium</button>
+        {/* Dropdown Fix */}
+        <div className={`dropdown ${dropdownOpen ? 'dropdown-open' : ''}`}  ref={dropdownRef}>
+          <button 
+            className="nav-btn" 
+            onClick={() => setDropdownOpen(!dropdownOpen)} >
+            Seminary Halls ⏷
+          </button>
+          {dropdownOpen && (
+            <div className="dropdown-content">
+              <button>Ground Floor Seminar hall</button>
+              <button>First Floor Seminar hall</button>
+              <button>Second Floor Seminar hall</button>
+              <button>Third Floor Seminar hall</button>
+              <button>113 Seminar hall</button>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

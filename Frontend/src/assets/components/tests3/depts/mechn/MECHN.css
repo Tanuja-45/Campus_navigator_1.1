@@ -1,0 +1,89 @@
+/* Global styles */
+body {
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Input row styles */
+  .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Dropdown styling */
+  .input-container select {
+    appearance: none;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 180px;
+    text-align: left;
+  }
+  
+  .input-container select:focus {
+    outline: none;
+    background-color: white;
+  }
+  
+  .info-links {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .info-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+  }
+  
+  .info-links a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Button styling */
+  .input-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .input-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Map container */
+  .leaflet-container {
+    background-color: white !important;
+    width: 100%;
+    height: 410px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .input-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .input-container select, .input-container button {
+      width: 90%;
+      max-width: 300px;
+    }
+  }

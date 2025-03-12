@@ -1,0 +1,48 @@
+.about-us {
+    padding: 60px 20px;
+    background-color: #e1f5e1;
+}
+
+.about-container, .mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text, .mission-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Added margin-top to push the mission heading slightly down */
+.mission-text {
+    margin-top: 20px;  /* Adjust this value as needed */
+}
+
+.about-text h2, .mission-text h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #1d3557;
+}
+
+.about-text p, .mission-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-image, .mission-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img, .mission-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

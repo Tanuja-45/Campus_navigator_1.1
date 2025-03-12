@@ -1,0 +1,128 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .map-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures the images wrap to a new line on smaller screens */
+  }
+  
+  .map-image {
+    width: 48%; /* Makes the images side by side */
+    max-width: 100%; /* Ensures images don't overflow the container */
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .map-h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .tables-container {
+    margin-top: 40px;
+  }
+  
+  /* Tables Styling */
+  .rooms-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
+  }
+  
+  .rooms-table th,
+  .rooms-table td {
+    padding: 15px;
+    text-align: left;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .rooms-table th {
+    background-color: #808080;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .rooms-table td {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .rooms-table th:nth-child(1),
+  .rooms-table td:nth-child(1) {
+    width: 20%;
+  }
+  
+  .rooms-table th:nth-child(2),
+  .rooms-table td:nth-child(2) {
+    width: 80%;
+  }
+  
+  .rooms-table td:nth-child(1),
+  .rooms-table th:nth-child(1) {
+    text-align: center;
+  }
+  
+  .rooms-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .rooms-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive Styling for Tables */
+  @media (max-width: 1200px) {
+    .rooms-table {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .rooms-table {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rooms-table {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Adjust images layout for smaller screens */
+  @media (max-width: 768px) {
+    .map-images {
+      justify-content: center; /* Centers the images when wrapping */
+    }
+  
+    .map-image {
+      width: 100%; /* Makes the images stack vertically and take full width */
+      margin-bottom: 20px; /* Adds spacing between stacked images */
+    }
+  }

@@ -1,0 +1,51 @@
+/* Default layout (5 cards per row) */
+.dept-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards in the first row */
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 40px; /* Add margin for spacing */
+}
+
+.dept-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px; /* Ensure cards don't get too wide */
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dept-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.dept-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.dept-card button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .dept-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dept-container {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}

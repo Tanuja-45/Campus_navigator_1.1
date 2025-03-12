@@ -1,0 +1,169 @@
+.staff-container {
+    padding: 20px;
+    background-color: cornsilk;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.staff-heading {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin: 30px 0 15px;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.teaching-heading {
+    color: #3b6db6;
+}
+
+.non-teaching-heading {
+    color: #8e4d8b;
+}
+
+.faculty-container, .non-teaching-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.staff-card, .faculty-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e3f2fd;
+}
+
+.staff-photo, .faculty-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    object-position: top;
+}
+
+.staff-name, .faculty-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-bottom: 8px;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+.staff-designation, .faculty-designation {
+    font-size: 1rem;
+    color: #607d8b;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.faculty-room, .faculty-contact, .faculty-email, 
+.staff-room, .staff-contact, .staff-email {
+    font-size: 0.9rem;
+    color: gray;
+    margin: 5px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.staff-card:hover, .faculty-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+    .staff-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 25px;
+    }
+
+    .staff-card, .faculty-card {
+        padding: 18px;
+    }
+
+    .staff-photo, .faculty-photo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .staff-name, .faculty-name {
+        font-size: 1.1rem;
+    }
+
+    .staff-designation, .faculty-designation {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .staff-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 20px;
+    }
+
+    .staff-card, .faculty-card {
+        padding: 15px;
+    }
+
+    .staff-photo, .faculty-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .staff-name, .faculty-name {
+        font-size: 1rem;
+    }
+
+    .staff-designation, .faculty-designation {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .staff-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .staff-card, .faculty-card {
+        padding: 12px;
+    }
+
+    .staff-photo, .faculty-photo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .staff-name, .faculty-name {
+        font-size: 0.9rem;
+    }
+
+    .staff-designation, .faculty-designation {
+        font-size: 0.85rem;
+    }
+}

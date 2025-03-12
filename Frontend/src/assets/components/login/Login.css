@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://sivacom.com.au/wp-content/uploads/2023/08/Navigating-technology.jpg") no-repeat center/cover;
+  backdrop-filter: blur(5px);
+  width: 100%;
+}
+
+.login-container {
+  width: 90%;
+  max-width: 420px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.15); /* Softer blur */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: #222; /* Slightly darker for contrast */
+}
+
+.login-container h1 {
+  font-size: 1.9rem;
+  font-weight: 1000;
+  color: #2d2d2d;
+  margin-bottom: 1.2rem;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 400;
+  color: orange;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #5a8dee; /* Brighter blue for focus */
+  outline: none;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 12px;
+  margin-top: 1rem;
+  background: linear-gradient(to right, #5a8dee, #3b7dd8); /* Vibrant blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-block:hover {
+  background: linear-gradient(to right, #3b7dd8, #5a8dee);
+  transform: scale(1.03);
+}
+
+.register-link {
+  margin-top: 12px;
+  font-size: 15px;
+  color: yellowgreen;
+  font-weight: 1000;
+}
+
+.register-link a {
+  color: #5a8dee;
+  text-decoration: none;
+  font-weight: 1000;
+}
+
+.register-link a:hover {
+  color: #3b7dd8;
+}

@@ -1,0 +1,83 @@
+/* Main content section that takes up available space */
+.main-content {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  overflow: auto; /* Allow scrolling if content is long */
+}
+
+/* Department container */
+.department-container {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Department Card Styles */
+.department-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: white;
+}
+
+.department-card:hover {
+  transform: translateY(-10px);
+}
+
+.department-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hod-name {
+  font-size: 1.1rem; /* Increased font size */
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.floor-no {
+  font-size: 1rem; /* Increased font size */
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.fac {
+  /* align-self: flex-start; */
+  background-color: #4caf50; /* Visible green background by default */
+  color: white;
+  margin-top: 10px;
+  padding: 8px 10px;
+  font-size: 1rem; /* Slightly larger font size */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.view-button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
