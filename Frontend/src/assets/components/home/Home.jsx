@@ -43,7 +43,7 @@ const Home = () => {
     if (roomDetails[input]) {
       setResult(roomDetails[input]);
     } else if (venueDetails[input]) {
-      setResult(venueDetails[input]);
+      setResult(venueDetails[input]);      git init      git init
     } else {
       for (let range in roomDetails) {
         const [start, end] = range.split("-").map(Number);
